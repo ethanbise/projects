@@ -1,0 +1,140 @@
+/* CSS Code was generated with GPT-4, with some modifications based on w3 schools and past projects */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f6; /* Light background for a clean look */
+    color: #333; /* Darker text for better readability */
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+text-align: center;
+}
+
+
+h2 {
+    color: #0056b3; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    margin-bottom: 30px; /* Space below tables */
+}
+
+#inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#inventory-table th, #inventory-table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Slightly larger padding for table cells */
+    text-align: left;
+}
+
+#inventory-table th {
+    background-color: #f2f2f2;
+    color: #333; /* Dark text for header for contrast */
+}
+
+#item-interaction form, #admin-login form, #admin-functions form {
+    margin: 20px auto;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px; /* Rounded corners for form */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+input[type="number"], input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Rounded corners for input fields */
+}
+button:active {
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Add an inset shadow for depth */
+}
+button {
+    padding: 10px 15px;
+    background-color: #28a745; /* Green for primary actions */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+button#show-admin-login {
+    background-color: #007bff; /* Blue for admin login */
+}
+
+button#show-admin-login:hover {
+    background-color: #0069d9;
+}
+
+button#admin-logout-button {
+    background-color: #dc3545; /* Red for logout */
+}
+
+button#admin-logout-button:hover {
+    background-color: #c82333;
+}
+
+.status-good {
+    color: green;
+}
+
+.status-low {
+    color: orange; /* Orange for better visibility */
+}
+
+.status-out {
+    color: red;
+}
+
+#admin-section {
+    background-color: #e9ecef; /* Lighter grey for differentiation */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    input[type="number"], input[type="text"], input[type="password"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+#logo-container {
+    text-align: center; /* Center the logo if it's an image */
+    margin: 20px 0; /* Add some space around the logo */
+
+}
+
+#logo-container img {
+    max-width: 200px; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#logo-container img:hover {
+    transform: scale(1.05); 
+}
+
+#logo-container img {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}

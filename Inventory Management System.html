@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--Ethan Bise, BIS-3023 Inventory Management System Project, December 1st 2023-->
+<!--This project was developed with the assistance of OpenAI's ChatGPT, specifically the GPT-4 model-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+   
+    <div id="inventory-display">
+        <h1>WELCOME EWWW ASSOCIATE. PLEASE ENSURE YOU ARE CLOCKED IN BEFORE MODIFYING INVENTORY.</h1>
+        <h2>Current Inventory</h2>
+        <table id="inventory-table">
+            <thead>
+                <tr>
+                    <th>Item Number</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Vendor</th>
+                    <th>Min Order Quantity</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inventory items will be dynamically rendered here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="item-interaction">
+        <h2>Inventory Removal Form</h2>
+        <h3>If you accidentally remove too much of an item, please contact an admin to remedy the error</h3>
+        <form id="item-form">
+            <input type="number" id="item-number" placeholder="Item Number" required min="1" step="1">
+            <input type="number" id="item-quantity" placeholder="Quantity to be removed" required min="1" step="1">
+            <button type="submit">Update Inventory</button>
+        </form>
+    </div>
+
+    <button id="show-admin-login">Admin Login</button>
+
+    <div id="admin-login">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+            <input type="password" id="admin-password" placeholder="Enter Admin Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="admin-functions" style="display:none;">
+        <h2>Admin Functions</h2>
+
+        <div id="show-add-item-form"></div>
+        <div id="show-delete-item-form"></div>
+        <div id="show-reorder-item-form"></div>
+
+        <!-- Add Item Form -->
+        <form id="add-item-form">
+            <h3>Add a new item to the inventory</h3>
+            <input type="number" id="new-item-number" placeholder="Item Number" required min="1" step="1">
+            <input type="text" id="new-item-name" placeholder="Item Name" required>
+            <input type="text" id="new-item-description" placeholder="Description" required>
+            <input type="number" id="new-item-quantity" placeholder="Quantity" required min="1" step="1">
+            <input type="text" id="new-item-vendor" placeholder="Vendor" required>
+            <input type="number" id="new-item-min-order-quantity" placeholder="Min Order Quantity" required min="1" step="1">
+            <button type="submit">Add Item</button>
+        </form>
+    
+        <!-- Delete Item Form -->
+        <form id="delete-item-form">
+            <h3>Delete an existing item from the inventory</h3>
+            <input type="number" id="delete-item-number" placeholder="Item Number" required min="1" step="1">
+            <button type="submit">Delete Item</button>
+        </form>
+    
+        <!-- Reorder Item Form -->
+        <form id="reorder-item-form">
+            <h3>Restock an item in the inventory</h3>
+            <input type="number" id="reorder-item-number" placeholder="Item Number" required min="1" step="1">
+            <input type="number" id="reorder-item-quantity" placeholder="Quantity" required min="1" step="1">
+            <button type="submit">Reorder Item</button>
+        </form>
+    </div>
+
+        <button id="admin-logout-button">Logout</button>
+    </div>
+
+    <div id="logo-container">
+        <img src="logo.png" alt="EWWW! Inc Logo"> 
+        </div>
+
+
+
+    <script src="inventory-script.js"></script> 
+</body>
+</html>
